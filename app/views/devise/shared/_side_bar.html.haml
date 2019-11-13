@@ -4,24 +4,38 @@
       = current_user.name
     %ul.header__lists
       %li.list
-        = link_to do
-          = fa_icon 'pencil-square-o', class: 'icon'
+        = link_to new_group_path do
+          %i.fa.fa-edit 
       %li.list
         = link_to edit_user_path(current_user) do
-          = fa_icon 'cog', class: 'icon'
+          %i.fa.fa-cog
   .groups
-    .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
-    .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
-    .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
+
+
+-# .chat__side
+-#   .chat__side__header
+-#     .chat__side__header__box
+-#       .chat__side__header__box__user__name
+-#         udon
+-#       .chat__side__header__box__menu
+-#         .chat__side__header__box__menu__new__group
+-#           = link_to new_group_path do
+-#             %i.fa.fa-edit 
+-#         .chat__side__header__box__menu__edit__user
+-#           = link_to edit_user_path(current_user) do
+-#             %i.fa.fa-cog
+-#   .groups
+-#     - current_user.groups.each do |group|
+-#       .groups__group
+-#         = link_to '#' do
+-#         .groups__group__name
+-#           = group.name
+-#         .groups__group__latest__message
+-#           メッセージはまだありません。

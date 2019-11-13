@@ -3,29 +3,25 @@
   font-size: 1rem;
   font-weight: lighter;
   display: flex;
-  .chat__side {
+  .side-bar {
     width: 300px;
     color: #ffffff;
-    &__header {
+    .header {
       background-color: #253141;
       height: 100px;
       display: flex;
       align-items: center;
       padding: 0 20px;
-      &__box {
+      &__lists {
         display: flex;
-        justify-content: space-between;
+        align-items: center;
+        justify-content: flex-end;
         width: 100%;
         font-weight: bold;
-        &__user__name {
+        .fa {
+          margin-left: 10px;
           font-size: 16px;
-        }
-        &__menu {
-          display: flex;
           list-style: none;
-          &__edit__user {
-            padding-left: 5px;
-          }
         }
       }
     }
@@ -33,13 +29,16 @@
       height: calc(100vh - 105px);
       background-color: #2f3e51;
       padding:20px 20px 0;
-      &__group {
+      .group {
         margin-bottom: 40px;
         &__name {
+          text-decoration: none;
+          color: white;
           font-size: 15px;
           margin-bottom: 5px;
         }
-        &__latest__message {
+        &__message {
+          color: white;
           font-size: 11px;
         }
       }  
@@ -49,3 +48,56 @@
 .fa{
   color: white;
 }
+
+// .wrapper {
+//   width: 100vw;
+//   font-size: 1rem;
+//   font-weight: lighter;
+//   display: flex;
+//   .side-bar {
+//     width: 300px;
+//     color: #ffffff;
+//     .header {
+//       background-color: #253141;
+//       height: 100px;
+//       display: flex;
+//       align-items: center;
+//       padding: 0 20px;
+//       &__name {
+//         display: flex;
+//         justify-content: space-between;
+//         width: 100%;
+//         font-weight: bold;
+//         &__user__name {
+//           font-size: 16px;
+//         }
+//         &__menu {
+//           display: flex;
+//           list-style: none;
+//           &__edit__user {
+//             padding-left: 5px;
+//           }
+//         }
+//       }
+//     }
+//     .groups {
+//       height: calc(100vh - 105px);
+//       background-color: #2f3e51;
+//       padding:20px 20px 0;
+//       &__group {
+//         margin-bottom: 40px;
+//         &__name {
+//           font-size: 15px;
+//           margin-bottom: 5px;
+//         }
+//         &__latest__message {
+//           font-size: 11px;
+//         }
+//       }  
+//     }
+//   }
+// }
+// .fa{
+//   color: white;
+// }
+
