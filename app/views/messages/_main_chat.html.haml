@@ -17,18 +17,12 @@
 
 
   .form
-    = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'form__message', placeholder: ' type a message'
-      .form__mask
-        = f.label :image, class: 'form__mask__image' do
-          %i.fa.fa-image
-          = f.file_field :image, class: 'hidden'
-      = f.submit 'Send', class: 'form__submit'
+    .form__box
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__box__message', placeholder: ' type a message', id: "form__box"
+        .form__box__mask
+          = f.label :image, class: 'form__box__mask__image', id: "form__box" do
+            %i.fa.fa-image
+            = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'form__box__mask__submit', id: "form__box"
         
-  -# .form
-  -#   .form__new__input
-  -#     %input#message__content.input__box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-  -#     %label.input-box__image{for: "message_image"}
-  -#       %i.fa.fa-image
-  -#       %input#message_image.input-box__image__file{name: "message[image]", type: "file"}
-  -#     %input.submit__btn{name: "commit", type: "submit", value: "Send"} 
