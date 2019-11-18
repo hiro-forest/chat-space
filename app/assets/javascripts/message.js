@@ -46,10 +46,3 @@ $(function(){
     return false;
   });
 });
-
-
-
-// `<div class="message">
-//           <p class="lower-message__image">
-//             ${message.image}
-//         </div>`
