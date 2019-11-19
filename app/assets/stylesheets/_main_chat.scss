@@ -43,9 +43,14 @@
       .message {
         overflow: scroll;
         padding-bottom: 40px;
-        &__upper__info {
+        .upper-message {
           display: flex;
           margin-bottom: 10px;
+          .upper-message__date {
+            color: #999999;
+            margin-left: 10px;
+            font-size: 12px;
+          }
           &__info__talker {
             font-size: 16px;
             font-weight: bold;
