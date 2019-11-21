@@ -4,8 +4,9 @@
       .main__header__left__box__current__group
         = @group.name
         .main__header__left__box__member__list
-          Member 
-          = current_user.name
+          Member
+          - @group.users.each do |user| 
+            = user.name
     .main__header__edit__btn
       = link_to edit_group_path(@group) do
         Edit
@@ -25,4 +26,3 @@
             %i.fa.fa-image
             = f.file_field :image, class: 'hidden'
           = f.submit 'Send', class: 'form__box__mask__submit', id: "form__box"
-        
